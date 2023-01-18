@@ -1,5 +1,5 @@
+# Every file should have these two lines at the top somewhere:
 import logging
-
 logger = logging.getLogger(__name__)
 
 
