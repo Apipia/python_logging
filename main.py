@@ -7,14 +7,15 @@ from module import module_function
 logger = logging.getLogger(__name__)
 
 
-def setup_logging(log_level="INFO"):
+def setup_logging(log_level="INFO", delim=" | "):
     # Root logger is configured with formatter and handler
     root_logger = logging.getLogger()
     root_logger.setLevel(log_level)
     formatter = logging.Formatter(
-        "[%(levelname)s] time:$(asctime)s thread:%(threadName)s func:%(funcName)s msg:%(message)s",
+        f"[%(levelname)s]{delim}time:$(asctime)s{delim}thread:%(threadName)s{delim}"
+        f"func:%(funcName)s{delim}msg:%(message)s",
     )
-    handler = RotatingFileHandler("app_logs.log", mode="a", maxBytes=1024*1024*2)
+    handler = RotatingFileHandler("example.log", mode="a", maxBytes=1024 * 1024 * 2)
     handler.setFormatter(formatter)
     root_logger.addHandler(handler)
     root_logger.info("Logging Setup Complete: {}".format(log_level))
