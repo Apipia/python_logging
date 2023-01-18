@@ -1,0 +1,7 @@
+[INFO] | time:$(asctime)s | thread:MainThread | func:setup_logging | msg:Logging Setup Complete: DEBUG
+[INFO] | time:$(asctime)s | thread:MainThread | func:main | msg:Application Starting
+[INFO] | time:$(asctime)s | thread:MainThread | func:module_function | msg:Logging from module.module_function
+[INFO] | time:$(asctime)s | thread:MainThread | func:main | msg:If log-level set to DEBUG, you should see some logs from requests module next.
+[DEBUG] | time:$(asctime)s | thread:MainThread | func:_new_conn | msg:Starting new HTTPS connection (1): www.google.com:443
+[DEBUG] | time:$(asctime)s | thread:MainThread | func:_make_request | msg:https://www.google.com:443 "GET / HTTP/1.1" 200 None
+[INFO] | time:$(asctime)s | thread:MainThread | func:main | msg:Application completed successfully

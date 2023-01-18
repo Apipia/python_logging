@@ -15,7 +15,7 @@ def setup_logging(log_level="INFO", delim=" | "):
         f"[%(levelname)s]{delim}time:$(asctime)s{delim}thread:%(threadName)s{delim}"
         f"func:%(funcName)s{delim}msg:%(message)s",
     )
-    handler = RotatingFileHandler("example.log", mode="a", maxBytes=1024 * 1024 * 2)
+    handler = RotatingFileHandler("application.log", mode="a", maxBytes=1024 * 1024 * 2)
     handler.setFormatter(formatter)
     root_logger.addHandler(handler)
     root_logger.info("Logging Setup Complete: {}".format(log_level))
